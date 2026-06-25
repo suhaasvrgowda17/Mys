@@ -35,23 +35,13 @@ import { useTranslation } from './lib/useTranslation';
 
 export default function App() {
   const { userProfile, workEntries, hireRequests, loading, addWorkEntry, updateProfile, toggleShortlist } = useFirebase();
-  const [tempLang, setTempLang] = useState<string>(() => {
-    if (typeof window !== 'undefined') {
-      return localStorage.getItem('karmik_temp_lang') || 'en';
-    }
-    return 'en';
-  });
+  const [tempLang, setTempLang] = useState<string>('en');
 
   const { t, lang } = useTranslation((userProfile?.preferredLanguage ? userProfile : { preferredLanguage: tempLang }) as any);
   const [isLoggedIn, setIsLoggedIn] = useState(false);
   const [activeSection, setActiveSection] = useState<Section>('profile');
   const [isSidebarOpen, setIsSidebarOpen] = useState(true);
-  const [selectedRole, setSelectedRole] = useState<UserRole | null>(() => {
-    if (typeof window !== 'undefined') {
-      return (localStorage.getItem('selectedRole') as UserRole) || null;
-    }
-    return null;
-  });
+  const [selectedRole, setSelectedRole] = useState<UserRole | null>(null);
   const [workerSearchQuery, setWorkerSearchQuery] = useState<string>('');
   const [theme, setTheme] = useState<'light' | 'dark'>(() => {
     if (typeof window !== 'undefined') {
@@ -90,11 +80,7 @@ export default function App() {
     return () => unsubscribe();
   }, []);
 
-  useEffect(() => {
-    if (selectedRole) {
-      localStorage.setItem('selectedRole', selectedRole);
-    }
-  }, [selectedRole]);
+
 
   useEffect(() => {
     if (userProfile?.role === 'organization' && activeSection === 'profile') {
