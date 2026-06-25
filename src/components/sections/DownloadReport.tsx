@@ -25,7 +25,7 @@ export default function DownloadReport({ profile, entries, t }: DownloadReportPr
 
   const reportTypes = [
     { id: 'standard', title: 'Work Certificate', icon: FileDown, desc: 'Complete verifiable work history' },
-    { id: 'idcard', title: 'Shramik ID Card', icon: Smartphone, desc: 'Printable digital identity card' },
+    { id: 'idcard', title: 'Karmika ID Card', icon: Smartphone, desc: 'Printable digital identity card' },
     { id: 'financial', title: 'Financial Ledger', icon: BarChart3, desc: 'Earnings & credit-readiness report' },
     { id: 'pitch', title: 'Pitch Deck', icon: TrendingUp, desc: 'Project vision & impact slides' }
   ];
@@ -48,7 +48,7 @@ export default function DownloadReport({ profile, entries, t }: DownloadReportPr
        doc.rect(20, 20, 170, 100, 'F');
        doc.setTextColor(255, 255, 255);
        doc.setFontSize(24);
-       doc.text('SHRAMIK SETU', 30, 45);
+       doc.text('KARMIKA SETU', 30, 45);
        doc.setFontSize(10);
        doc.text('VERIFIED DIGITAL IDENTITY', 30, 52);
        
@@ -65,7 +65,7 @@ export default function DownloadReport({ profile, entries, t }: DownloadReportPr
          doc.text('VERIFIED PORTAL', 145, 37);
        }
        
-       doc.save(`shramik-id-${user.setuId}.pdf`);
+       doc.save(`karmika-id-${user.setuId}.pdf`);
        return;
     }
 
@@ -155,7 +155,7 @@ export default function DownloadReport({ profile, entries, t }: DownloadReportPr
        
        doc.setFontSize(10);
        doc.text('This certificate validates that the aforementioned worker has completed multiple verified jobs', 20, syPos + 25);
-       doc.text('registered on the Shramik Setu platform with consistent positive feedback.', 20, syPos + 31);
+       doc.text('registered on the Karmika Setu platform with consistent positive feedback.', 20, syPos + 31);
        
        doc.save(`skills-cert-${user.setuId}.pdf`);
        return;

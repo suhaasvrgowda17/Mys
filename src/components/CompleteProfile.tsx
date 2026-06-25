@@ -18,7 +18,7 @@ export default function CompleteProfile() {
   const [photoUrl, setPhotoUrl] = useState('');
   const [address, setAddress] = useState('');
   const [phone, setPhone] = useState('');
-  const [preferredLanguage, setPreferredLanguage] = useState<'en' | 'hi' | 'kn' | 'ta'>('hi');
+  const [preferredLanguage, setPreferredLanguage] = useState<'en' | 'hi' | 'kn' | 'ta'>('en');
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();

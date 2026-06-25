@@ -66,7 +66,7 @@ export default function FinancialHub({ profile, entries }: FinancialHubProps) {
       interest: '2% per month',
       tenure: '3-6 Months',
       type: 'Instant Cash',
-      benefits: ['Paperless application', 'Same-day disbursal', 'Based on Shramik Setu score'],
+      benefits: ['Paperless application', 'Same-day disbursal', 'Based on Karmika Setu score'],
       link: 'https://www.betterplace.co.in/worker-benefits/fintech/'
     }
   ];
@@ -118,7 +118,7 @@ export default function FinancialHub({ profile, entries }: FinancialHubProps) {
               Instant <br /> Micro-Loan
             </h2>
             <p className="text-white/60 mb-8 text-sm leading-relaxed max-w-[80%]">
-              Your Shramik Setu Trust Score of <strong>{trustScore}</strong> makes you eligible for pre-approved loans from our Indian banking partners.
+              Your Karmika Setu Trust Score of <strong>{trustScore}</strong> makes you eligible for pre-approved loans from our Indian banking partners.
             </p>
           </div>
           
@@ -154,7 +154,7 @@ export default function FinancialHub({ profile, entries }: FinancialHubProps) {
           
           <div className="pt-6 border-t border-brand-ink/5">
              <p className="text-[10px] text-brand-muted font-medium text-center italic">
-               Loan interest rates are capped at 1.5% monthly for all Shramik Setu members.
+               Loan interest rates are capped at 1.5% monthly for all Karmika Setu members.
              </p>
           </div>
         </div>

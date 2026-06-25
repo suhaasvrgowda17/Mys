@@ -37,9 +37,9 @@ export default function App() {
   const { userProfile, workEntries, hireRequests, loading, addWorkEntry, updateProfile, toggleShortlist } = useFirebase();
   const [tempLang, setTempLang] = useState<string>(() => {
     if (typeof window !== 'undefined') {
-      return localStorage.getItem('karmik_temp_lang') || 'hi';
+      return localStorage.getItem('karmik_temp_lang') || 'en';
     }
-    return 'hi';
+    return 'en';
   });
 
   const { t, lang } = useTranslation((userProfile?.preferredLanguage ? userProfile : { preferredLanguage: tempLang }) as any);
@@ -68,6 +68,8 @@ export default function App() {
     if (path.startsWith('/view/')) {
       const id = path.split('/view/')[1];
       if (id) setPublicViewId(id);
+    } else if (path !== '/') {
+      window.history.replaceState({}, '', '/');
     }
   }, []);
 

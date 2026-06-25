@@ -97,7 +97,7 @@ export default function Sidebar({ activeSection, setActiveSection, isOpen, setIs
             animate={{ opacity: 1 }}
             className="flex flex-col"
           >
-            <span className="font-display font-black text-xl leading-none text-brand-ink">SHRAMIK</span>
+            <span className="font-display font-black text-xl leading-none text-brand-ink">KARMIKA</span>
             <span className="text-[10px] uppercase tracking-widest font-bold text-brand-muted">SETU</span>
           </motion.div>
         )}

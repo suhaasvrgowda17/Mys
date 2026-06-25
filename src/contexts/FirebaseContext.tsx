@@ -62,7 +62,7 @@ export function FirebaseProvider({ children }: { children: ReactNode }) {
           setUserProfile({
             uid: 'demo-user',
             name: 'Demo Principal',
-            email: 'demo@shramiksetu.org',
+            email: 'demo@karmikasetu.org',
             phone: '+91 9876543210',
             address: 'New Delhi, India',
             role: role as any,

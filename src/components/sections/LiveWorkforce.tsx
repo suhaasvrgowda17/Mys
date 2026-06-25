@@ -128,7 +128,7 @@ export default function LiveWorkforce() {
               <div className={cn("p-3 rounded-2xl", card.bg.replace('bg-', 'bg-opacity-50 bg-'))}>
                 <card.icon size={20} className={card.color} />
               </div>
-              <div className="text-[10px] font-black text-brand-muted opacity-50">SHRAMIK-SETU</div>
+              <div className="text-[10px] font-black text-brand-muted opacity-50">KARMIKA-SETU</div>
             </div>
             <div className="text-3xl font-black text-brand-ink mb-1">{card.value}</div>
             <div className="text-[10px] font-black uppercase tracking-widest text-brand-muted">{card.label}</div>

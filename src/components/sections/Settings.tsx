@@ -13,7 +13,7 @@ interface SettingsProps {
 
 export default function Settings({ profile, t, theme, onThemeToggle, onLanguageChange }: SettingsProps) {
   const { updateLanguage, updateProfile } = useFirebase();
-  const [language, setLanguage] = useState(profile?.preferredLanguage || 'hi');
+  const [language, setLanguage] = useState(profile?.preferredLanguage || 'en');
   const [notifications, setNotifications] = useState(profile?.notificationsEnabled !== false);
   const [isSaving, setIsSaving] = useState(false);
 
